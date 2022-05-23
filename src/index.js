@@ -39,7 +39,7 @@ function showTemperature(response) {
   let temp = Math.round(response.data.main.temp);
   let temperatureNow = document.querySelector("h3.temperature-now");
   temperatureNow.innerHTML = `${temp}°C`;
-  let description = response.data.weather.[0].description;
+  let description = response.data.weather[0].description;
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = `${description}`;
   let humidity = response.data.main.humidity
@@ -61,8 +61,8 @@ function showCity(event) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
 
-let searchCityForm = document.querySelector("#search-form");
-searchCityForm.addEventListener("submit", showCity);
+let searchCityForm = document.querySelector("body #search-submit");
+searchCityForm.addEventListener("click", showCity);
 
 function handlePosition(position) {
   let locationSwitch = document.querySelector("#switch");
@@ -76,8 +76,8 @@ function handlePosition(position) {
 }
 navigator.geolocation.getCurrentPosition(handlePosition);
 
-let location = document.querySelector("#geolocation");
-location.addEventListener("click", handlePosition);
+let geolocation = document.querySelector("#geolocation");
+geolocation.addEventListener("click", handlePosition);
 
 function showCelsiusUnits(event) {
   event.preventDefault();

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&family=Poppins:wght@400;500&family=Rubik+Bubbles&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css"/>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-
 <body>
     <div class="card weather-app">
         <div class="card-body">
@@ -30,7 +28,7 @@
                     </div>
                     <div class="col">
                         <span class="time" id="current-time">
-
+                            
                         </span>
                     </div>
                     <div class="col">
@@ -41,99 +39,98 @@
                     </div>
                 </div>
             </div>
-
+            
             <h1>Nook Weather App</h1>
-            <div class="input-group mb-3" id="search-form">
-                <input type="text" class="form-control" id="city-input" placeholder="Type a city" aria-label="City name"
-                    aria-describedby="button-addon2">
+            <form class="input-group mb-3" id="search-form">
+                <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="city-input" class="form-control">
                 <input type="submit" class="btn btn-outline-secondary" value="Search" id="search-submit">
-            </div>
+            </form>
             <h1 class="card-title city-name">
                 City Name
             </h1>
             <h2 class="card-title date" id="current-date"> </h2>
-            <h2 class="card-title" id="description"> </h2>
+            <h2 class="card-title" id="description">  </h2>
             <div>
                 <div class="row">
                     <div class="col-6">
-                        <span <i class="fa-solid fa-cloud temperature-now-icon"></i>
-                        </span>
+                        <span 
+                            <i class="fa-solid fa-cloud temperature-now-icon"></i>
+                        </span>  
                     </div>
                     <div class="col-6">
-                        </br>
+                    </br>
                         <h3 class="temperature-now">
                             28°C
                         </h3>
                         <h2 class="units">
                             <a href=# id="celsius-link"> °C </a>
-                            |
+                                    |
                             <a href=# id="fahrenheit-link"> °F </a>
                         </h2>
                         <h4 id="humidity"> </h4>
                         <h4 id="windspeed"> </h4>
                     </div>
                 </div>
-                </br>
-                <div class="card-footer text-center text-muted footer">
-                    <div>
-                        <div class="row">
-                            <div class="col other-days">
-                                Thurs
-                            </div>
-                            <div class="col other-days">
-                                Fri
-                            </div>
-                            <div class="col other-days">
-                                Sat
-                            </div>
-                            <div class="col other-days">
-                                Sun
-                            </div>
-                            <div class="col other-days">
-                                Mon
-                            </div>
-                            <div class="col other-days">
-                                Tues
-                            </div>
+            </br>
+        <div class="card-footer text-center text-muted footer">
+            <div>
+                <div class="row">
+                    <div class="col other-days">
+                        Thurs
+                    </div>
+                    <div class="col other-days">
+                        Fri
+                    </div>
+                    <div class="col other-days">
+                        Sat
+                    </div>
+                    <div class="col other-days">
+                        Sun
+                    </div>
+                    <div class="col other-days">
+                        Mon
+                    </div>
+                    <div class="col other-days">
+                        Tues
+                    </div>
+                </div>
+            <div>
+                <div class="row">
+                    <div class="col card border-one">
+                        <div class="card-body cardd">
+                            <i class="fa-solid fa-cloud-rain other-weather-icons day-one"></i>
                         </div>
-                        <div>
-                            <div class="row">
-                                <div class="col card border-one">
-                                    <div class="card-body cardd">
-                                        <i class="fa-solid fa-cloud-rain other-weather-icons day-one"></i>
-                                    </div>
-                                </div>
-                                <div class="col card border-two">
-                                    <div class="card-body">
-                                        <i class="fa-solid fa-cloud other-weather-icons day-two"></i>
-                                    </div>
-                                </div>
-                                <div class="col card border-three">
-                                    <div class="card-body">
-                                        <i class="fa-solid fa-cloud other-weather-icons day-three"></i>
-                                    </div>
-                                </div>
-                                <div class="col card border-four">
-                                    <div class="card-body">
-                                        <i class="fa-solid fa-sun other-weather-icons day-four"></i>
-                                    </div>
-                                </div>
-                                <div class="col card border-five">
-                                    <div class="card-body">
-                                        <i class="fa-solid fa-cloud other-weather-icons day-five"></i>
-                                    </div>
-                                </div>
-                                <div class="col card border-six">
-                                    <div class="card-body">
-                                        <i class="fa-solid fa-sun other-weather-icons day-six"></i>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col card border-two">
+                        <div class="card-body">
+                            <i class="fa-solid fa-cloud other-weather-icons day-two"></i>
+                        </div>
+                    </div>
+                    <div class="col card border-three">
+                        <div class="card-body">
+                            <i class="fa-solid fa-cloud other-weather-icons day-three"></i>
+                        </div>
+                    </div>
+                    <div class="col card border-four">
+                        <div class="card-body">
+                            <i class="fa-solid fa-sun other-weather-icons day-four"></i>
+                        </div>
+                    </div>
+                    <div class="col card border-five">
+                        <div class="card-body">
+                            <i class="fa-solid fa-cloud other-weather-icons day-five"></i>
+                        </div>
+                    </div>
+                    <div class="col card border-six">
+                        <div class="card-body">
+                            <i class="fa-solid fa-sun other-weather-icons day-six"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <script src="src/index.js">  </script>
+            </div>
+        </div>
+    </div>
+    <script src = "src/index.js">  </script>
 </body>
-
 </html>
